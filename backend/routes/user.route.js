@@ -14,7 +14,7 @@ userRouter.post("/register", (req, res) => {
     const { name, email, pass, role } = req.body;
 
     try {
-        bcrypt.hash(pass, 5, async(err, hash) => {
+        bcrypt.hash(pass, 5, async (err, hash) => {
             if (err) {
                 console.log(err);
                 res.status(200).send({ error: err });
@@ -42,7 +42,7 @@ userRouter.post("/register", (req, res) => {
 });
 
 //login
-userRouter.post("/login", async(req, res) => {
+userRouter.post("/login", async (req, res) => {
     const { email, pass } = req.body;
     try {
         const user = await UserModel.findOne({ email });
@@ -71,8 +71,8 @@ userRouter.post("/login", async(req, res) => {
 });
 
 //logout
-userRouter.get("/logout", async(req, res) => {
-    const token = req.headers.authorization ? .split(" ")[1];
+userRouter.get("/logout", async (req, res) => {
+    const token = req.headers.authorization?.split(" ")[1];
     try {
         const blacklist = new blackListTokenModel({ token });
         await blacklist.save();
@@ -83,7 +83,7 @@ userRouter.get("/logout", async(req, res) => {
 });
 
 // post question answer
-userRouter.post("/submissions", auth, async(req, res) => {
+userRouter.post("/submissions", auth, async (req, res) => {
     const { questionID, userID, code, title, results } = req.body;
     // console.log(userID);
     try {
@@ -121,7 +121,7 @@ userRouter.post("/submissions", auth, async(req, res) => {
 });
 
 // get submissions
-userRouter.get("/submissions", auth, async(req, res) => {
+userRouter.get("/submissions", auth, async (req, res) => {
     try {
         const submissions = await submissionModel.find({
             userID: req.body.userID,
@@ -134,7 +134,7 @@ userRouter.get("/submissions", auth, async(req, res) => {
 
 // route to get user profile picture
 
-userRouter.get("/", auth, async(req, res) => {
+userRouter.get("/", auth, async (req, res) => {
     // console.log(req.body);
     try {
         const user = await UserModel.find({ _id: req.body.userID });
