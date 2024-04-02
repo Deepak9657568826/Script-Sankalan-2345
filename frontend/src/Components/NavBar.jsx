@@ -153,9 +153,9 @@ const Navbar = () => {
                   <Link to="/login">
                     <Button
                       fontSize={"1.3rem"}
-                      color={"white"}
+                      color={"black"}
                       bg={"transparent"}
-                      _hover={{ bg: "transparent", color: "#AAD7D9" }}
+                      _hover={{ bg: "transparent", color: "blue" }}
                     >
                       Login
                     </Button>
@@ -163,9 +163,9 @@ const Navbar = () => {
                   <Link to="/signup">
                     <Button
                       fontSize={"1.3rem"}
-                      color={"white"}
+                      color={"black"}
                       bg={"transparent"}
-                      _hover={{ bg: "transparent", color: "#AAD7D9" }}
+                      _hover={{ bg: "transparent", color: "blue" }}
                     >
                       Sign Up
                     </Button>
