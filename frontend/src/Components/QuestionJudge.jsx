@@ -1,6 +1,17 @@
 import { useEffect, useState } from "react";
 import { themes } from "../assets/EditorThemes";
-import { useToast } from "@chakra-ui/react";
+import {
+  Table,
+  TableCaption,
+  TableContainer,
+  Tbody,
+  Td,
+  Tfoot,
+  Th,
+  Thead,
+  Tr,
+  useToast,
+} from "@chakra-ui/react";
 import Select from "react-select";
 import PromisePending from "./PromisePending";
 import LanguageDropdown from "./LanguageDropdown";
@@ -39,6 +50,7 @@ function QuestionJudge({ questionId, question }) {
   const [submitted, setSubmitted] = useState(false);
   const [judgeResult, setJudgeResult] = useState({});
   const [errorJudge, setErrorJudge] = useState();
+  const [show, setShow] = useState(false);
   const toast = useToast();
 
   const langCode = {
@@ -179,6 +191,7 @@ function QuestionJudge({ questionId, question }) {
   const submitCodeJudge = async () => {
     setSubmitted(false);
     setPending(true);
+    setShow(true);
     setStatusId(null);
     if (!code) {
       toast({
@@ -190,7 +203,7 @@ function QuestionJudge({ questionId, question }) {
       return;
     }
     setJudgeResult([]);
-
+    console.log(question.testCases);
     for (let i = 0; i < question.testCases.length; i++) {
       setErrorJudge("");
       handleSubmitJudge(question.testCases[i].inp);
@@ -295,6 +308,35 @@ function QuestionJudge({ questionId, question }) {
           results={judgeResult}
         />
       )}
+      {show &&
+      <TableContainer>
+      <Table variant="striped" colorScheme="teal">
+        <TableCaption>Imperial to metric conversion factors</TableCaption>
+        <Thead>
+          <Tr>
+            <Th>
+              <strong>Test Case</strong>
+            </Th>
+            <Th>
+              <strong>Expected</strong>
+            </Th>
+            <Th>
+              <strong>Output</strong>
+            </Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {question.testCases?.map((item, index) => (
+            <Tr key={index}>
+              <Td>25.4</Td>
+              <Td>{item.inp}</Td>
+              <Td>{item.oup}</Td>
+            </Tr>
+          ))}
+        </Tbody>
+      </Table>
+    </TableContainer>
+      }
       <div>
         <p>
           If you are getting Daily Limit Reached in output, please select
