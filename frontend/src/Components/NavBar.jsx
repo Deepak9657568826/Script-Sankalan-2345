@@ -37,10 +37,10 @@ const Navbar = () => {
     <>
       <Box>
         <Flex
-        style={{ "height":"60px", "borderRadius": "10px" }}
+        style={{ "height":"60px", "borderRadius": "0px" }}
           p={{ base: ".8rem 1.3rem", md: "1rem 3rem" }}
           boxShadow="base"
-          bg={"#19212C"}
+          bg={"skyblue"}
           display={"flex"}
           alignItems={"center"}
           direction={{ base: "row", md: "row" }}
@@ -73,9 +73,9 @@ const Navbar = () => {
               <Link to="/">
                 <Button
                   fontSize={"1.3rem"}
-                  color={"white"}
+                  color={"black"}
                   bg={"transparent"}
-                  _hover={{ bg: "transparent", color: "#AAD7D9" }}
+                  _hover={{ bg: "transparent", color: "blue" }}
                 >
                   Home
                 </Button>
@@ -83,9 +83,9 @@ const Navbar = () => {
               <Link to="/about">
                 <Button
                   fontSize={"1.3rem"}
-                  color={"white"}
+                  color={"black"}
                   bg={"transparent"}
-                  _hover={{ bg: "transparent", color: "#AAD7D9" }}
+                  _hover={{ bg: "transparent", color: "blue" }}
                 >
                   About
                 </Button>
@@ -93,9 +93,9 @@ const Navbar = () => {
               <Link to="/html">
                 <Button
                   fontSize={"1.3rem"}
-                  color={"white"}
+                  color={"black"}
                   bg={"transparent"}
-                  _hover={{ bg: "transparent", color: "#AAD7D9" }}
+                  _hover={{ bg: "transparent", color: "blue" }}
                 >
                   HTML
                 </Button>
@@ -104,9 +104,9 @@ const Navbar = () => {
               <Link to="/contests">
                 <Button
                   fontSize={"1.3rem"}
-                  color={"white"}
+                  color={"black"}
                   bg={"transparent"}
-                  _hover={{ bg: "transparent", color: "#AAD7D9" }}
+                  _hover={{ bg: "transparent", color: "blue" }}
                 >
                   Contests
                 </Button>
@@ -117,9 +117,9 @@ const Navbar = () => {
                   <Link to="/dashboard">
                     <Button
                       fontSize={"1.3rem"}
-                      color={"white"}
+                      color={"black"}
                       bg={"transparent"}
-                      _hover={{ bg: "transparent", color: "#AAD7D9" }}
+                      _hover={{ bg: "transparent", color: "blue" }}
                     >
                       {name}
                     </Button>
@@ -128,8 +128,8 @@ const Navbar = () => {
                   <Button
                     fontSize={"1.3rem"}
                     color={"black"}
-                    bg={"white"}
-                    _hover={{ bg: "#AAD7D9", color: "black" }}
+                    bg={'whitesmoke'}
+                    _hover={{ bg: "#AAD7D9", color: "Red" }}
                     onClick={() => {
                       setTimeout(() => {
                         localStorage.setItem("token", "");
