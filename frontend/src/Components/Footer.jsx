@@ -10,8 +10,8 @@ const Footer = () => {
   return (
     <Box
       className="n-footer px-6 flex flex-col items-center justify-center "
-      bg={"#19212C"}
-      color={"white"}
+      bg={"skyblue"}
+      color={"black"}
     >
       <Grid
         templateColumns={{
@@ -31,23 +31,23 @@ const Footer = () => {
             fontSize={{ base: ".8rem", md: "1rem" }}
           >
             <Link to="/">
-              <Text mt={2} color={"white"} _hover={{ color: "#92C7CF" }}>
+              <Text mt={2} color={"black"} _hover={{ color: "blue" }}>
                 Home
               </Text>
             </Link>
             <Link to="/about">
-              <Text color={"white"} _hover={{ color: "#92C7CF" }}>
+              <Text color={"black"} _hover={{ color: "blue" }}>
                 About us
               </Text>
             </Link>
             <Link to="/html">
-              <Text color={"white"} _hover={{ color: "#92C7CF" }}>
+              <Text color={"black"} _hover={{ color: "blue" }}>
                 {" "}
                 HTML Compiler
               </Text>
             </Link>
             <Link to="/judger">
-              <Text color={"white"} _hover={{ color: "#92C7CF" }}>
+              <Text color={"black"} _hover={{ color: "blue" }}>
                 {" "}
                 Judger
               </Text>
@@ -67,18 +67,18 @@ const Footer = () => {
             fontSize={{ base: ".8rem", md: "1rem" }}
           >
             <Link to="#">
-              <Text color={"white"} _hover={{ color: "#92C7CF" }} mt={2}>
+              <Text color={"black"} _hover={{ color: "blue" }} mt={2}>
                 Code Q&A's
               </Text>
             </Link>
             <Link to="https://www.termsfeed.com/blog/terms-conditions-url/">
-              <Text color={"white"} _hover={{ color: "#92C7CF" }}>
+              <Text color={"black"} _hover={{ color: "blue" }}>
                 {" "}
                 Terms of use
               </Text>
             </Link>
             <Link to="https://www.termsfeed.com/blog/terms-conditions-url/">
-              <Text color={"white"} _hover={{ color: "#92C7CF" }}>
+              <Text color={"black"} _hover={{ color: "blue" }}>
                 {" "}
                 Privacy Policy
               </Text>
