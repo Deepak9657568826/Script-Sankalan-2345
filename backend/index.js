@@ -7,6 +7,7 @@ const { questionRouter } = require('./routes/question.route');
 const { compileRouter } = require('./routes/compiler.route');
 const { QuestionModel } = require('./models/question.model');
 const { auth } = require('./middleware/auth.middleware');
+const { submissionRouter } = require('./routes/submission.route');
 
 require('dotenv').config();
 const port = process.env.port;
@@ -22,16 +23,17 @@ app.use("/contests", contestsRouter);
 app.use("/users", userRouter);
 app.use("/questions", questionRouter);
 app.use("/compile", compileRouter);
+app.use("/submission", submissionRouter)
 
 // Define a route
 app.get('/', (req, res) => {
     res.send('This is home routes');
 });
 
-app.get("/questions", auth, async (req, res) => {
+app.get("/questions", auth, async(req, res) => {
     const questions = await QuestionModel.find();
     res.status(200).send({ questions });
-  });
+});
 
 // Start the server
 app.listen(port, async() => {
