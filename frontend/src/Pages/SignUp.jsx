@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { url } from "../assets/Extra";
 import "./login.css"
 
 const Signup = () => {
@@ -37,8 +36,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      console.log(`${url}/users/register`);
-      const response = await axios.post(`${url}/users/register`, {
+      const response = await axios.post(`https://coderipple-backend.onrender.com/users/register`, {
         name,
         email,
         pass,
