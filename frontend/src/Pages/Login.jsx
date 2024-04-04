@@ -1,10 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
-  Flex,
-  Box,
-  FormControl,
-  FormLabel,
-  Input,
   Button,
   Modal,
   ModalOverlay,
@@ -18,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { authLinLout, setName, setUser } from "../redux/authSlice";
 import { url } from "../assets/Extra";
+import "./login.css"
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -67,53 +63,66 @@ const Login = () => {
   };
 
   return (
-    <Flex
-      color="black"
-      height="100vh"
-      alignItems="center"
-      justifyContent="center"
-      marginTop="-70px"
-    >
-      <Box
-        p={8}
-        width={{ base: "80%", sm: "80%", md: "60%", lg: "40%" }}
-        borderWidth={1}
-        borderRadius={8}
-        boxShadow="lg"
-        backgroundColor="#EDF2F7"
-      >
-        <Box textAlign="center" mb={4}>
-          <h1 style={{ fontSize: "40px", fontWeight: "700" }}>Login</h1>
-        </Box>
-        <form onSubmit={handleSubmit}>
-          <FormControl id="email" mb={4}>
-            <FormLabel>Email address</FormLabel>
-            <Input
-              type="email"
-              backgroundColor="white"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </FormControl>
-          <FormControl id="password" mb={6}>
-            <FormLabel>Password</FormLabel>
-            <Input
-              type="password"
-              backgroundColor="white"
-              placeholder="Enter your password"
-              value={pass}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </FormControl>
+    <div className="container">
+      <div className="forms-container">
+        <div className="signin-signup">
+          <form action="#" className="sign-in-form" id="signInForm">
+            <h2 className="title">Sign in</h2>
+            <div className="input-field">
+              <i className="fas fa-user"></i>
+              <input type="text" placeholder="Email" onClick={(e)=>setEmail(e.target.value)} />
+            </div>
+            <div className="input-field">
+              <i className="fas fa-lock"></i>
+              <input type="password" placeholder="Password" onClick={(e)=>setPassword(e.target.value)} />
+            </div>
+            <div id="messageWrapper"> </div>
+            <input type="submit" value="Login" className="btn solid" onClick={handleSubmit}/>
+            <p className="social-text">Or Sign in with social platforms</p>
+            <div className="social-media">
+              <a href="#" className="social-icon">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="fab fa-google"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
 
-          <Button width="full" type="submit" backgroundColor="#92C7CF">
-            Log In
-          </Button>
-        </form>
-      </Box>
-
-      {/* Modal */}
+      <div className="panels-container">
+        <div className="panel left-panel">
+          <div className="content">
+            <h3>Join Coding Community</h3>
+            <p>
+              Sign up to participate in coding quizzes, connect with developers, and expand your coding network.
+            </p>
+            <button className="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <img src="../assets/images/login.svg" className="image" alt="" />
+        </div>
+        <div className="panel right-panel">
+          <div className="content">
+            <h3>One of us ?</h3>
+            <p>
+              Ready for a coding challenge? Log in to test your coding knowledge and skills.
+            </p>
+            <button className="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <img src="../assets/images/signup.svg" className="image" alt="" />
+        </div>
+      </div>
       <Modal isOpen={showModal} onClose={closeModal}>
         <ModalOverlay />
         <ModalContent>
@@ -126,7 +135,7 @@ const Login = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </Flex>
+    </div>
   );
 };
 
