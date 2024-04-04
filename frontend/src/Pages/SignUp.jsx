@@ -1,10 +1,5 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import {
-  Flex,
-  Box,
-  FormControl,
-  FormLabel,
-  Input,
   Button,
   Modal,
   ModalOverlay,
@@ -16,6 +11,7 @@ import {
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { url } from "../assets/Extra";
+import "./login.css"
 
 const Signup = () => {
   const [name, setUsername] = useState("");
@@ -74,64 +70,75 @@ const Signup = () => {
   };
 
   return (
-    <Flex
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-      minH="100vh"
-    >
-      <Box
-        p={8}
-        width={{ base: "90%", sm: "80%", md: "60%", lg: "40%" }}
-        borderWidth={1}
-        borderRadius={8}
-        boxShadow="lg"
-        mt={-10}
-        backgroundColor="#EDF2F7"
-      >
-        <form onSubmit={handleSubmit}>
-          <Box textAlign="center" mb={4}>
-            <h1 style={{ fontSize: "40px", fontWeight: "700" }}>Signup</h1>
-          </Box>
+    <div className="container">
+      <div className="forms-container">
+        <div className="signin-signup">
+          <form action="#" className="sign-up-form" id="signUpForm">
+            <h2 className="title">Sign up</h2>
+            <div className="input-field">
+              <i className="fas fa-user"></i>
+              <input type="text" name="username" placeholder="Username" onChange={handleUsername} />
+            </div>
+            <div className="input-field">
+              <i className="fas fa-envelope"></i>
+              <input type="email" name="email" placeholder="Email" onChange={handleEmail} />
+            </div>
+            <div className="input-field">
+              <i className="fas fa-lock"></i>
+              <input type="password" name="password" placeholder="Password" onChange={handlePassword}/>
+            </div>
+            {/* <!-- <div class="input-field">
+              <i class="fas fa-image"></i>
+              <input type="file" id="imageUpload" name="imageUpload" accept="image/*" />
+            </div> --> */}
+            <input type="submit" className="btn" value="Sign up" onClick={handleSubmit} />
+            <div id="signUpMessageWrapper" className="message-wrapper">{modalMessage}</div>
+            <p className="social-text">Or Sign up with social platforms</p>
+            <div className="social-media">
+              <a href="#" className="social-icon">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="fab fa-google"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
 
-          <FormControl id="name" mb={4}>
-            <FormLabel>Username</FormLabel>
-            <Input
-              type="text"
-              backgroundColor="white"
-              placeholder="Enter your username"
-              value={name}
-              onChange={handleUsername}
-            />
-          </FormControl>
-          <FormControl id="email" mb={4}>
-            <FormLabel>Email address</FormLabel>
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              backgroundColor="white"
-              onChange={handleEmail}
-            />
-          </FormControl>
-
-          <FormControl id="pass" mb={6}>
-            <FormLabel>Password</FormLabel>
-            <Input
-              type="password"
-              placeholder="Enter your password"
-              value={pass}
-              backgroundColor="white"
-              onChange={handlePassword}
-            />
-          </FormControl>
-
-          <Button type="submit" width="full" backgroundColor="#92C7CF">
-            Sign Up
-          </Button>
-        </form>
-      </Box>
-
+      <div className="panels-container">
+        <div className="panel left-panel">
+          <div className="content">
+            <h3>Join Coding Community</h3>
+            <p>
+              Sign up to participate in coding quizzes, connect with developers, and expand your coding network.
+            </p>
+            <button className="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <img src="../assets/images/login.svg" className="image" alt="" />
+        </div>
+        <div className="panel right-panel">
+          <div className="content">
+            <h3>One of us ?</h3>
+            <p>
+              Ready for a coding challenge? Log in to test your coding knowledge and skills.
+            </p>
+            <button className="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <img src="../assets/images/signup.svg" className="image" alt="" />
+        </div>
+      </div>
+      
       <Modal isOpen={showModal} onClose={closeModal}>
         <ModalOverlay />
         <ModalContent>
@@ -144,7 +151,7 @@ const Signup = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </Flex>
+    </div>
   );
 };
 
