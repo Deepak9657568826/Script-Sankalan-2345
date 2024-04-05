@@ -7,6 +7,7 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
+  useToast,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -19,6 +20,7 @@ const Signup = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
   const navigate = useNavigate();
+  const toast = useToast();
 
   const handleUsername = (e) => {
     setUsername(e.target.value);
@@ -34,7 +36,13 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    toast({
+      title: "Register",
+      description: "Please wait...",
+      status: "info",
+      duration: null, // Set duration to null to make it persistent until dismissed manually
+      isClosable: false,
+    }); 
     try {
       const response = await axios.post(`https://coderipple-backend.onrender.com/users/register`, {
         name,
