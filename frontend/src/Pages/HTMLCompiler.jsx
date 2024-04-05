@@ -76,6 +76,8 @@ function HTMLCompiler() {
           <Button
             title="JavaScript"
             onClick={() => {
+
+              
               onTabClick("JavaScript");
             }}
             isActive={activeTab === "JavaScript"}
