@@ -97,7 +97,7 @@ const Navbar = () => {
                   bg={"transparent"}
                   _hover={{ bg: "transparent", color: "blue" }}
                 >
-                  HTML
+                  HTML Compiler
                 </Button>
               </Link>
 
