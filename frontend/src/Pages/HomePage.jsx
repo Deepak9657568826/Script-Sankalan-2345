@@ -44,7 +44,7 @@ function HomePage() {
               mt={"1rem"}
               textAlign={"justify"}
             >
-              CodeFlow is a social development environment for front-end
+              CodeRipple is a social development environment for front-end
               designers and developers. Build and deploy a website, show off
               your work, build test cases to learn and debug, and find
               inspiration.
@@ -136,7 +136,7 @@ function HomePage() {
               </Heading>
               <Text color={"black"}>
                 Want to upgrade your skills and get noticed? Participating in
-                CodeFlow Challenges is a great way to try something new.
+                CodeRipple Challenges is a great way to try something new.
               </Text>
             </Box>
             <Box

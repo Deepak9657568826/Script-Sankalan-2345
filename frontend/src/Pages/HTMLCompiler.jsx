@@ -7,7 +7,7 @@ import { Box, border } from "@chakra-ui/react";
 function HTMLCompiler() {
   const [openedEditor, setOpenedEditor] = useState("HTML");
   const [html, setHTML] = useState(
-    `<div>\n    <h1>Heading</h1>\n    <p id="para" >Paragraph</p>\n    <button id="btn" >Click Me</button>\n</div>`
+    `<div>\n    <h1>Heading</h1>\n    <p id="para" >Paragraph</p>\n    <button id="btn" >click me</button>\n</div>`
   );
   const [css, setCSS] = useState("p{\ncolor:red\n}\nh1{\ncolor:blue\n}");
   const [javascript, setJS] = useState(
