@@ -1,15 +1,12 @@
 import React from "react";
 import {
   Box,
-  Button,
-  ButtonGroup,
-  Divider,
   Heading,
   Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
+import { Card, CardBody, } from "@chakra-ui/react";
 import raushan from "../assets/TeamPhoto/Pic.png";
 import Akash from "../assets/TeamPhoto/Akash.jpeg";
 import Deepak from "../assets/TeamPhoto/Deepak.jpeg";
@@ -48,7 +45,7 @@ const About = () => {
         <Heading as="h2" size="xl" mb={4} style={{textAlign:"center"}}>
           Meet the Team:
         </Heading>
-        <div className="Allteam">
+        <div className="Allteam" style={{display:"flex", justifyContent:"space-between", flexWrap:"wrap"}}>
         <Card maxW="300px">
           <CardBody>
             <Image
@@ -58,8 +55,8 @@ const About = () => {
               borderRadius="lg"
             />
             <Stack mt="6" spacing="3">
-              <Heading size="md">Full Stack Developer</Heading>
-              <Text></Text>
+              <Heading size="md">Raushan Raj Singh</Heading>
+              <Text>Full Stack Developer</Text>
             </Stack>
           </CardBody>
         </Card>
@@ -72,8 +69,8 @@ const About = () => {
               borderRadius="lg"
             />
             <Stack mt="6" spacing="3">
-              <Heading size="md">Full Stack Developer</Heading>
-              <Text></Text>
+              <Heading size="md">Akash Yadav</Heading>
+              <Text>Full Stack Developer</Text>
             </Stack>
           </CardBody>
         </Card>
@@ -86,8 +83,8 @@ const About = () => {
               borderRadius="lg"
             />
             <Stack mt="6" spacing="3">
-              <Heading size="md">Full Stack Developer</Heading>
-              <Text></Text>
+              <Heading size="md">Deepak Wayzode</Heading>
+              <Text>Full Stack Developer</Text>
             </Stack>
           </CardBody>
         </Card>
@@ -100,8 +97,8 @@ const About = () => {
               borderRadius="lg"
             />
             <Stack mt="6" spacing="3">
-              <Heading size="md">Full Stack Developer</Heading>
-              <Text></Text>
+              <Heading size="md">Abhishek Kumar</Heading>
+              <Text>Full Stack Developer</Text>
             </Stack>
           </CardBody>
         </Card>

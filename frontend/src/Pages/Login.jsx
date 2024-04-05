@@ -7,6 +7,7 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
+  useToast,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -22,11 +23,17 @@ const Login = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
   const navigate = useNavigate();
+  const toast = useToast()
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("click");
-    console.log(email,pass);
+    toast({
+      title: "Logging in",
+      description: "Please wait...",
+      status: "info",
+      duration: null, // Set duration to null to make it persistent until dismissed manually
+      isClosable: false,
+    }); 
 
     try {
       const response = await axios.post(`https://coderipple-backend.onrender.com/users/login`, {
@@ -35,6 +42,7 @@ const Login = () => {
       });
       console.log(response);
       if (response.status === 200) {
+        toast.closeAll();
         const token = response.data.token;
         localStorage.setItem("token", token);
         localStorage.setItem("name", response.data.name);
@@ -44,13 +52,13 @@ const Login = () => {
           dispatch(setName(response.data.name)),
           dispatch(setUser(response.data.user)),
         ]);
-        setModalMessage("Login successful");
+        setModalMessage(response.data.msg);
         setShowModal(true);
       } else {
         console.error("Login failed");
       }
     } catch (error) {
-      setModalMessage("Please register yourself");
+      setModalMessage(error);
       setShowModal(true);
       console.error("Error:", error);
     }
@@ -58,7 +66,7 @@ const Login = () => {
 
   const closeModal = () => {
     setShowModal(false);
-    if (modalMessage === "Login successful") {
+    if (modalMessage === "Login Successful!") {
       navigate("/");
     }
   };

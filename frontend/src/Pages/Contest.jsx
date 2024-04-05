@@ -50,7 +50,7 @@ function Contest() {
           {contest.questions &&
             contest.questions.map((question, index) => {
               return (
-                <Box className=" contest w-4/5  flex px-5 rounded-md py-2 items-center justify-between m-auto  ">
+                <Box key={index} className=" contest w-4/5  flex px-5 rounded-md py-2 items-center justify-between m-auto  ">
                   <Box className=" flex  items-center w-1/2">
                     <p className="w-5">{index + 1}.</p>
                     <p className="w-full">{question.qstTitle} </p>
