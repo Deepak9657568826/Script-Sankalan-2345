@@ -3,6 +3,7 @@ import heroImg from "../assets/heroImage2.png";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import "../App.css";
 
 function HomePage() {
   const auth = useSelector((state) => state.auth.auth);
@@ -103,11 +104,14 @@ function HomePage() {
             flexDirection={{ base: "column", md: "row" }}
             m={{ base: "2rem 0rem" }}
           >
+
             <Box
+            className="homepageBox"
               p={5}
               border={"1px solid #19212C"}
               w={{ base: "100%", md: "90%" }}
               borderRadius={"1rem"}
+              // bg={"lightblue"}
             >
               <Heading
                 textAlign={"center"}
@@ -122,6 +126,7 @@ function HomePage() {
               </Text>
             </Box>
             <Box
+                className="homepageBox"
               p={5}
               border={"1px solid #19212C"}
               w={{ base: "100%", md: "90%" }}
@@ -141,6 +146,7 @@ function HomePage() {
             </Box>
             <Box
               p={5}
+              className="homepageBox"
               border={"1px solid #19212C"}
               borderRadius={"1rem"}
               w={{ base: "100%", md: "90%" }}

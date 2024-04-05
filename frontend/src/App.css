@@ -104,3 +104,12 @@ body {
   background-color: white !important;
 }
 
+.homepageBox{
+  background-color: rgb(216, 216, 216);
+}
+.homepageBox:hover{
+ transform: scale(1.07);
+ transition: all 0.4s linear;
+}
+
+
