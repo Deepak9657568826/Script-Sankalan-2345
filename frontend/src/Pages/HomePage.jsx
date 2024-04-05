@@ -134,6 +134,8 @@ function HomePage() {
             >
               <Heading
                 textAlign={"center"}
+
+                
                 mb={{ base: 2, md: 5 }}
                 fontSize={{ base: "1.5rem", md: "2rem" }}
               >
