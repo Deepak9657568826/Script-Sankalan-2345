@@ -1,22 +1,22 @@
-# CodeFlow
+# CodeRipple
 
 ## Introduction
-CodeFlow is the brainchild of a team of passionate developers who came together during a Construct Week, a dedicated period for intensive collaboration and innovation. Fueled by a shared vision to create a cutting-edge  coding platform, our journey began with a commitment to push the boundaries of what's possible in the world of coding.
+CodeRipple is the brainchild of a team of passionate developers who came together during a Construct Week, a dedicated period for intensive collaboration and innovation. Fueled by a shared vision to create a cutting-edge  coding platform, our journey began with a commitment to push the boundaries of what's possible in the world of coding.
 
 ## Project Type
  Fullstack
 
 ## Deployed App
- Frontend: <a href=""  target="_blank" > Codeflow App </a>
+ Frontend: <a href="https://script-sankalan-2345.vercel.app/"  target="_blank" > CodeRipple App </a>
 <br/>
-Backend:  <a href=""  target="_blank" > Codeflow Sever </a> 
+Backend:  <a href="https://coderipple-backend.onrender.com"  target="_blank" > CodeRipple Sever </a> 
 <br/>
-Database:  <a href=""  target="_blank" > Codeflow </a> 
+Database:  <a href="https://github.com/Deepak9657568826/Script-Sankalan-2345"  target="_blank" > CodeRipple </a> 
 <br/>
 
 
 ## Directory Structure
-CodeFlow/
+CodeRipple/
 <br>
 ├─ Backend/
 <br>
@@ -56,52 +56,6 @@ npm i
 npm run server
 ``` 
 
-
-## Project Screenshots 
-- **Home:**
-  ![Home](https://github.com/Vinay-the-dev-bot/CodeFlow/assets/70647591/85dd0521-eba8-4c84-9cc1-0f70dd0fa931)
-
-- **Sign Up:**
-  ![Sign Up](https://github.com/Vinay-the-dev-bot/CodeFlow/assets/70647591/ab645d6f-a2a7-4c8a-a5ee-a292e5ef59eb)
-
-- **Log In:**
-  ![Log In](https://github.com/Vinay-the-dev-bot/CodeFlow/assets/70647591/5f1dad45-5397-43d3-90c3-37223823c7c0)
-
-- **HTML Compiler:**
-![HTML Compiler](https://github.com/Vinay-the-dev-bot/CodeFlow/assets/70647591/ff334b88-dca6-47b0-afcc-bc93aaf03aab)
-
-- **Contest:**
-![Contest](https://github.com/Vinay-the-dev-bot/CodeFlow/assets/70647591/20823c09-9cb3-4f73-8421-a255c8eafd76)
-
-- **Solve:**
-![Solve](https://github.com/Vinay-the-dev-bot/CodeFlow/assets/70647591/45a7c06d-81ec-41f9-b2d8-5c12d78700eb)
-
-- **Dashboard:**
-![Dashboard](https://github.com/Vinay-the-dev-bot/CodeFlow/assets/70647591/847d1ece-f84d-490f-92a0-d1d639d48173)
-
-- **My Submission:**
-![my Submmision](https://github.com/Vinay-the-dev-bot/CodeFlow/assets/70647591/94009f32-ecec-4fff-abc6-c5d5fe27b77b)
-
-- **Admin:**
-![Admin)](https://github.com/Vinay-the-dev-bot/CodeFlow/assets/70647591/c99a30d5-d50b-46bc-8402-d24822d78d08)
-
-- **Add Questions:**
-![Add Questions](https://github.com/Vinay-the-dev-bot/CodeFlow/assets/70647591/ae1e17a3-9a81-48a5-a977-45638f3791f4)
-
-
-
-## Credentials
-Admin Access :
-<br/>
-Email : 
-<br/>
-Password : 
-
-User Access : 
-<br/>
-Email : 
-<br/>
-Password : 
 
  
 ## Technology Stack

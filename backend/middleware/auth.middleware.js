@@ -11,7 +11,7 @@ const auth = async (req, res, next) => {
     }
     if (token) {
       try {
-        const decoded = jwt.verify(token, "codeflow");
+        const decoded = jwt.verify(token, "CodeRipple");
         // console.log(decoded);
         const { userID } = decoded;
   

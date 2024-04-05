@@ -93,7 +93,7 @@ const Footer = () => {
           >
             <Text mt={2}>+91 828*74345*</Text>
             <Text>49 Greenpark New Delhi</Text>
-            <Text>codeflow@gmail.com</Text>
+            <Text>CodeRipple@gmail.com</Text>
           </Flex>
         </GridItem>
         <GridItem className="flex flex-col justify-start mt-8" w="100%" gap={1}>
@@ -121,7 +121,7 @@ const Footer = () => {
         mt={2}
       >
         <Text p={"1rem 0"} fontSize={{ base: ".8rem", md: "1rem" }}>
-          © Copy right 2023 CodeFlow
+          © Copy right 2023 CodeRipple
         </Text>
       </Box>
     </Box>
