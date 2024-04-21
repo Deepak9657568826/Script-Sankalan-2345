@@ -4,7 +4,7 @@ import {
     Flex,
     FormControl,
     FormLabel,
-    Heading,
+  
     Image,
     Input,
     Modal,
@@ -46,11 +46,11 @@ import {
     const toast = useToast();
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-    const [testCases, setTestCases] = useState([]);
+
     const [difficulty, setDifficulty] = useState();
     const [points, setPoint] = useState();
     const [topics, setTopics] = useState();
-    const [constraints, setConstraints] = useState();
+
   
     const [inp, setInp] = useState();
     const [oup, setOup] = useState();
@@ -88,8 +88,8 @@ import {
             testCases: tc,
             points,
             difficulty,
-            topics,
-            constraints,
+            topics
+      
           },
           {
             headers: {

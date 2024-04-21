@@ -106,12 +106,12 @@ function HomePage() {
           >
 
             <Box
-            className="homepageBox"
+              className="homepageBox"
               p={5}
               border={"1px solid #19212C"}
               w={{ base: "100%", md: "90%" }}
               borderRadius={"1rem"}
-              // bg={"lightblue"}
+            // bg={"lightblue"}
             >
               <Heading
                 textAlign={"center"}
@@ -126,7 +126,7 @@ function HomePage() {
               </Text>
             </Box>
             <Box
-                className="homepageBox"
+              className="homepageBox"
               p={5}
               border={"1px solid #19212C"}
               w={{ base: "100%", md: "90%" }}
@@ -135,7 +135,7 @@ function HomePage() {
               <Heading
                 textAlign={"center"}
 
-                
+
                 mb={{ base: 2, md: 5 }}
                 fontSize={{ base: "1.5rem", md: "2rem" }}
               >

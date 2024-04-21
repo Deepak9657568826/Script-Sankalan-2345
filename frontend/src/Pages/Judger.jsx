@@ -3,7 +3,7 @@ import { useState } from "react";
 import CodeEditor from "../Components/CodeEditor";
 import LanguageDropdown from "../Components/LanguageDropdown";
 import ThemeDropdown from "../Components/ThemeDropdown";
-import { languageOptions } from "../assets/LanguageOptions";
+
 import OutputWindow from "../Components/OutputWindow";
 import PromisePending from "../Components/PromisePending";
 import { themes } from "../assets/EditorThemes";
@@ -38,7 +38,7 @@ let c = 8;
   const [langFocus, setLangFocus] = useState("java");
   const [customInput, setCustomInput] = useState("");
   const [theme, setTheme] = useState(themes[0]);
-  const [language, setLanguage] = useState(languageOptions[0]);
+
   const [output, setOutPut] = useState("OUTPUT");
   const [code, setCode] = useState(javaCode);
   const [pending, setPending] = useState(false);
@@ -105,7 +105,7 @@ let c = 8;
   const onSelectChange = (sl) => {
     setCode(langCode[`${sl.value}`]);
     setLangFocus(sl.value);
-    setLanguage(sl);
+
   };
   const onChange = (action, data) => {
     switch (action) {

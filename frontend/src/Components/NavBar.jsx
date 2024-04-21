@@ -37,7 +37,7 @@ const Navbar = () => {
     <>
       <Box>
         <Flex
-        style={{ "height":"60px", "borderRadius": "0px" }}
+          style={{ "height": "60px", "borderRadius": "0px" }}
           p={{ base: ".8rem 1.3rem", md: "1rem 3rem" }}
           boxShadow="base"
           bg={"skyblue"}
@@ -99,7 +99,7 @@ const Navbar = () => {
                 >
                   HTML Compiler
 
-                  
+
                 </Button>
               </Link>
 

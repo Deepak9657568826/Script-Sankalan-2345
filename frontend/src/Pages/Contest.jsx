@@ -50,6 +50,7 @@ function Contest() {
           {contest.questions &&
             contest.questions.map((question, index) => {
               return (
+                // eslint-disable-next-line react/jsx-key
                 <Box className=" contest w-4/5  flex px-5 rounded-md py-2 items-center justify-between m-auto  ">
                   <Box className=" flex  items-center w-1/2">
                     <p className="w-5">{index + 1}.</p>
@@ -57,20 +58,18 @@ function Contest() {
                   </Box>
                   <Box className="flex w-2/5 items-center  justify-between text-left ">
                     <Box
-                      className={` text-center text-white   ${
-                        difficultyColors[question.difficulty]
-                      }       py-2  rounded-md `}
+                      className={` text-center text-white   ${difficultyColors[question.difficulty]
+                        }       py-2  rounded-md `}
                       w={{ base: "100%", md: "40%" }}
                     >
                       {question.difficulty}
                     </Box>
                     <Button
-                      bg={`${
-                        state &&
-                        state.solved_questions?.includes(question.qstId)
+                      bg={`${state &&
+                          state.solved_questions?.includes(question.qstId)
                           ? "#4ccd99"
                           : "#92C7CF"
-                      } `}
+                        } `}
                       fontWeight={0}
                       color={"black"}
                       className={`w-2/5 `}

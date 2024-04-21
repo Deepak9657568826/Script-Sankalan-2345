@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+/* eslint-disable react/jsx-no-undef */
+import { useEffect, useState } from "react";
 import Button from "../Components/Button";
-import Editor, { useMonaco } from "@monaco-editor/react";
+
 import ThemeDropdown from "../Components/ThemeDropdown";
 import { themes } from "../assets/EditorThemes";
-import { Box, border } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 function HTMLCompiler() {
   const [openedEditor, setOpenedEditor] = useState("HTML");
   const [html, setHTML] = useState(
@@ -21,13 +22,13 @@ function HTMLCompiler() {
     setOpenedEditor(editorName);
     setActiveTab(editorName);
   };
-  function handleHTMLChange(value, event) {
+  function handleHTMLChange(value) {
     setHTML(value);
   }
-  function handleCSSChange(value, event) {
+  function handleCSSChange(value) {
     setCSS(value);
   }
-  function handleJSChange(value, event) {
+  function handleJSChange(value) {
     setJS(value);
   }
   const handleThemeChange = (theme) => {
@@ -77,7 +78,7 @@ function HTMLCompiler() {
             title="JavaScript"
             onClick={() => {
 
-              
+
               onTabClick("JavaScript");
             }}
             isActive={activeTab === "JavaScript"}

@@ -16,6 +16,7 @@ import "./login.css"
 
 const Login = () => {
   const dispatch = useDispatch();
+  // eslint-disable-next-line no-unused-vars
   const auth = useSelector((state) => state.auth.auth);
   const [email, setEmail] = useState("");
   const [pass, setPassword] = useState("");

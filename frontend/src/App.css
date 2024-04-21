@@ -86,7 +86,7 @@ body {
 } */
 
 
-.Allteam{
+.Allteam {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -94,23 +94,23 @@ body {
   margin: auto;
   padding-left: 7%;
 }
+
 @media (max-width: 600px) {
-  .Allteam{
-    
+  .Allteam {
+
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-.css-nas1cv{
+.css-nas1cv {
   background-color: white !important;
 }
 
-.homepageBox{
+.homepageBox {
   background-color: rgb(216, 216, 216);
 }
-.homepageBox:hover{
- transform: scale(1.07);
- transition: all 0.4s linear;
+
+.homepageBox:hover {
+  transform: scale(1.07);
+  transition: all 0.4s linear;
 }
-
-
