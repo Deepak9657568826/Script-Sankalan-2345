@@ -65,10 +65,10 @@ function QuestionJudge({ questionId, question }) {
     console.log("judgeInputjudgeInput : ", judgeInput);
     const options = {
       method: "GET",
-      url: "https://judge0-ce.p.rapidapi.com/submissions" + "/" + token,
+      url: "https://judge029.p.rapidapi.com/submissions" + "/" + token,
       params: { base64_encoded: "true", fields: "*" },
       headers: {
-        "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
+        "X-RapidAPI-Host": "judge029.p.rapidapi.com",
         "X-RapidAPI-Key": `${apiKey}`,
       },
     };
@@ -123,12 +123,12 @@ function QuestionJudge({ questionId, question }) {
     };
     const options = {
       method: "POST",
-      url: "https://judge0-ce.p.rapidapi.com/submissions",
+      url: "https://judge029.p.rapidapi.com/submissions",
       params: { base64_encoded: "true", fields: "*" },
       headers: {
         "content-type": "application/json",
         "Content-Type": "application/json",
-        "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
+        "X-RapidAPI-Host": "judge029.p.rapidapi.com",
         "X-RapidAPI-Key": `${apiKey}`,
       },
       data: formData,
@@ -161,12 +161,12 @@ function QuestionJudge({ questionId, question }) {
     };
     const options = {
       method: "POST",
-      url: "https://judge0-ce.p.rapidapi.com/submissions",
+      url: "https://judge029.p.rapidapi.com/submissions",
       params: { base64_encoded: "true", fields: "*" },
       headers: {
         "content-type": "application/json",
         "Content-Type": "application/json",
-        "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
+        "X-RapidAPI-Host": "judge029.p.rapidapi.com",
         "X-RapidAPI-Key": `${apiKey}`,
       },
       data: formData,
