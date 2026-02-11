@@ -7,7 +7,7 @@ CodeRipple is the brainchild of a team of passionate developers who came togethe
  Fullstack
 
 ## Deployed App
- Frontend: <a href="https://script-sankalan-2345.vercel.app/"  target="_blank" > CodeRipple App </a>
+ Frontend: <a href="https://oj-drab.vercel.app/"  target="_blank" > CodeRipple App </a>
 <br/>
 Backend:  <a href="https://coderipple-backend.onrender.com"  target="_blank" > CodeRipple Sever </a> 
 <br/>
