@@ -11,12 +11,12 @@ export const keys = [
   {
     name: "MG21",
     label: "MG21",
-    value: "6bef58b5e8msh23550006c382291p1de9e0jsn314effa1ed3c",
+    value: "51ceec623dmshbeba4ceff24fb8dp1953d5jsnd37a541360cd",
   },
   {
     name: "VM16",
     label: "VM16",
-    value: "224384aa94mshc52778bc445bf9fp13014fjsnaede84f221c4",
+    value: "fab19039c9msh596b78689c1d87dp18be78jsnc28d5f298b36",
   },
   {
     name: "MDM",
