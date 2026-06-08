@@ -1,4 +1,7 @@
-# CodeRipple 
+
+# CodeRipple
+
+
 
 ## Introduction
 CodeRipple is the brainchild of a team of passionate developers who came together during a Construct Week, a dedicated period for intensive collaboration and innovation. Fueled by a shared vision to create a cutting-edge  coding platform, our journey began with a commitment to push the boundaries of what's possible in the world of coding.
@@ -7,7 +10,9 @@ CodeRipple is the brainchild of a team of passionate developers who came togethe
  Fullstack
 
 ## Deployed App
- Frontend: <a href="https://oj-drab.vercel.app/"  target="_blank" > CodeRipple App </a>
+
+ Frontend: <a href="https://script-sankalan-2345.vercel.app/"  target="_blank" > CodeRipple App </a>
+
 <br/>
 Backend:  <a href="https://coderipple-backend.onrender.com"  target="_blank" > CodeRipple Sever </a> 
 <br/>

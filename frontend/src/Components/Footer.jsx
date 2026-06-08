@@ -91,9 +91,12 @@ const Footer = () => {
             flexDirection={"column"}
             fontSize={{ base: ".8rem", md: "1rem" }}
           >
-            <Text mt={2}>+91 9657568826</Text>
-            <Text>Mumbai, Maharashtra</Text>
-            <Text>coderipple@gmail.com</Text>
+
+            <Text mt={2}>+91 828*74345*</Text>
+            <Text>49 Greenpark New Delhi</Text>
+            <Text>CodeRipple@gmail.com</Text>
+
+
           </Flex>
         </GridItem>
         <GridItem className="flex flex-col justify-start mt-8" w="100%" gap={1}>

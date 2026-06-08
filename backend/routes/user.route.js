@@ -49,7 +49,7 @@ userRouter.post("/login", async (req, res) => {
         if (user) {
             bcrypt.compare(pass, user.pass, (err, result) => {
                 if (result) {
-                    const token = jwt.sign({ userID: user._id }, "codeflow", {
+                    const token = jwt.sign({ userID: user._id }, "CodeRipple", {
                         expiresIn: "7d",
                     });
                     res.status(200).send({
@@ -60,10 +60,12 @@ userRouter.post("/login", async (req, res) => {
                     });
                 } else {
                     res
-                        .status(400)
-                        .send({ msg: "Please register first, wrong Credential" });
+                        .status(200)
+                        .send({ msg: "wrong Credential" });
                 }
             });
+        }else{
+            res.status(200).send({msg:"No user found, Please Register"})
         }
     } catch (err) {
         res.status(400).send({ error: "err" });
