@@ -1,4 +1,4 @@
-# CodeRipple
+# CodeRipple 
 
 ## Introduction
 CodeRipple is the brainchild of a team of passionate developers who came together during a Construct Week, a dedicated period for intensive collaboration and innovation. Fueled by a shared vision to create a cutting-edge  coding platform, our journey began with a commitment to push the boundaries of what's possible in the world of coding.
